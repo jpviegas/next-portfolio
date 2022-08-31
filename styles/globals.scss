@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  --color-bg: #212428;
+  --color-bg-gradient: linear-gradient(145deg, #1e2024, #23272b);
+  --color-bg-gradient-dark: linear-gradient(to right bottom, #212428, #16181c);
+  --navbar-bg: #212428;
+  --navbar-active: rgba(33,36,40,0.8);
+  --color-font-light: rgb(207,207,207);
+  --color-font: #c4cfde;
+  --color-font-dark: #878e99;
+  --color-red-dark: #f9004d;
+  --box-shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  --box-shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+  --box-shadow-inner: 1px 4px 2px -3px rgba(0,0,0,0.7) inset, -1px -3px 3px -2px rgba(255,255,255,0.2) inset;
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 200vh;
+  background: var(--color-bg);
+}
+
+section {
+  position: relative;
+  padding-bottom: 7rem;
+  padding-top: 4rem;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(0,0,0,0.2);
+  }
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.global {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 2rem;
+  @media screen and (min-width: 1500px) {
+    margin: auto;
+    width: 1500px;
+  }
+}
