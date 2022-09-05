@@ -48,11 +48,11 @@ section {
 
   &::after {
     background: var(0, 0, 0, 0.2);
+    bottom: 0;
     content: "";
     height: 2px;
     left: 0;
     position: absolute;
-    top: 0;
     width: 100%;
   }
 }

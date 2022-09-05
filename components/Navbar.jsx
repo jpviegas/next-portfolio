@@ -30,7 +30,7 @@ function Navbar() {
         <div className={styles.me}>
           <Link href="/">
             <>
-              <span>BIO</span>
+              {/* <span>jpv</span> */}
               <div className={styles.profile}>
                 <Image
                   width="100%"
@@ -45,6 +45,9 @@ function Navbar() {
         <ul className={styles.navList}>
           <li>
             <Link href="#home">Home</Link>
+          </li>
+          <li>
+            <Link href="#portfolio">Portfólio</Link>
           </li>
           <li>
             <Link href="#resume">Resume</Link>
@@ -77,6 +80,9 @@ function Navbar() {
               </div>
               <li>
                 <Link href="#home">Home</Link>
+              </li>
+              <li>
+                <Link href="#portfolio">Portfólio</Link>
               </li>
               <li>
                 <Link href="#resume">Resume</Link>
