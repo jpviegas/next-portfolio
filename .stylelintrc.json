@@ -4,11 +4,11 @@
     "stylelint-config-standard",
     "stylelint-config-prettier",
     "stylelint-prettier/recommended",
-    "stylelint-config-standard-scss",
-    "stylelint-config-prettier-scss"
+    "stylelint-config-standard-scss"
   ],
   "rules": {
-    "prettier/prettier": true,
-    "order/properties-alphabetical-order": true
+    "prettier/prettier": null,
+    "order/properties-alphabetical-order": true,
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$"
   }
 }

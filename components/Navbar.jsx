@@ -3,6 +3,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import useOnClickOutside from "../hooks/useClickOutside";
+import me from "../public/me.jpg";
 import styles from "../styles/Navbar.module.scss";
 
 function Navbar() {
@@ -35,13 +36,13 @@ function Navbar() {
                   width="100%"
                   height="100%"
                   objectFit="contain"
-                  src="/01.jpg"
+                  src={me}
                 />
               </div>
             </>
           </Link>
         </div>
-        <ul className={styles.nav_list}>
+        <ul className={styles.navList}>
           <li>
             <Link href="#home">Home</Link>
           </li>

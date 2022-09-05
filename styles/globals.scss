@@ -1,23 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap');
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap";
 
 * {
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins',sans-serif;
+  scroll-behavior: smooth;
+
   --color-bg: #212428;
   --color-bg-gradient: linear-gradient(145deg, #1e2024, #23272b);
   --color-bg-gradient-dark: linear-gradient(to right bottom, #212428, #16181c);
   --navbar-bg: #212428;
-  --navbar-active: rgba(33,36,40,0.8);
-  --color-font-light: rgb(207,207,207);
+  --navbar-active: rgb(33 36 40 / 80%);
+  --color-font-light: rgb(207 207 207);
   --color-font: #c4cfde;
   --color-font-dark: #878e99;
   --color-red-dark: #f9004d;
   --box-shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
   --box-shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
-  --box-shadow-inner: 1px 4px 2px -3px rgba(0,0,0,0.7) inset, -1px -3px 3px -2px rgba(255,255,255,0.2) inset;
-  scroll-behavior: smooth;
+  --box-shadow-inner:
+    1px 4px 2px -3px rgb(0 0 0 / 70%) inset,
+    -1px -3px 3px -2px rgb(255 255 255 / 20%) inset;
 }
 
 ul {
@@ -29,27 +32,28 @@ a {
 }
 
 html {
-  width: 100vw;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 body {
-  min-height: 200vh;
   background: var(--color-bg);
+  min-height: 200vh;
 }
 
 section {
-  position: relative;
   padding-bottom: 7rem;
   padding-top: 4rem;
+  position: relative;
+
   &::after {
-    content: '';
+    background: var(0, 0, 0, 0.2);
+    content: "";
+    height: 2px;
+    left: 0;
     position: absolute;
     top: 0;
-    left: 0;
     width: 100%;
-    height: 2px;
-    background: var(0,0,0,0.2);
   }
 }
 
@@ -59,11 +63,12 @@ button {
 }
 
 .global {
-  position: relative;
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding: 0 2rem;
+  position: relative;
+  width: 100%;
+
   @media screen and (min-width: 1500px) {
     margin: auto;
     width: 1500px;

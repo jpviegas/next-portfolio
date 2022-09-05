@@ -1,25 +1,26 @@
 .container {
-  position: sticky;
-  top: 0;
-  z-index: 2;
   background-color: var(--color-navbar-bg);
+  border-bottom: 2px solid rgb(0 0 0 / 20%);
   color: var(--color-font-light);
   font-weight: 400;
-  width: 100%;
-  border-bottom: 2px solid rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
   transition: all 0.3s ease-in-out;
+  width: 100%;
+  z-index: 2;
 }
 
 .scrolled {
-  background: rgba(0,0,0,0.95);
-  border-color: rgb(68,68,68);
+  background: rgb(0 0 0 / 95%);
+  border-color: rgb(68 68 68);
 }
 
 .inner {
+  align-items: center;
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 2rem;
+
   @media screen and (min-width: 1500px) {
     margin: auto;
     width: 1500px;
@@ -28,57 +29,131 @@
 
 .me {
   a {
+    align-items: center;
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     gap: 1rem;
   }
+
   span {
-    font-size: 1.3rem;
     color: var(--color-font-light);
+    font-size: 1.3rem;
   }
+
   .profile {
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
     box-shadow: var(--box-shadow-1);
+    height: 60px;
     overflow: hidden;
+    width: 60px;
   }
 }
 
-.nav_list {
+.mobileNav {
+  background: rgb(0 0 0 / 30%);
+  display: none;
+  height: 100vh;
+  transition: transform ease-in-out 250ms;
+  width: 100vw;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    a {
+      color: whitesmoke;
+      font-size: 1.4rem;
+    }
+
+    .close {
+      margin-bottom: 2rem;
+      margin-top: 2rem;
+      outline: 2px solid whitesmoke;
+      width: min-content;
+
+      svg {
+        color: whitesmoke;
+        font-size: 1.8rem;
+        transition: color 250ms ease-in-out;
+      }
+
+      &:hover,
+      &:focus {
+        outline-color: var(--color-red-dark);
+
+        svg {
+          color: var(--color-red-dark);
+        }
+      }
+
+      button {
+        background: transparent;
+        display: flex;
+        padding: 0.7rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    left: 0;
+    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+
+    nav {
+      background: var(--color-bg);
+      padding: 1rem;
+      width: 250px;
+    }
+  }
+}
+
+.navList {
   display: flex;
   gap: 1.5rem;
+
   .mobile {
     display: none;
+
     @media screen and (max-width: 768px) {
       display: flex;
+
+      svg {
+        color: whitesmoke;
+        font-size: 1.8rem;
+        transition: color 250ms ease-in-out;
+      }
+
       button {
-        display: flex;
         background: transparent;
+        display: flex;
         padding: 0.7rem;
-        &:hover, &:focus {
+
+        &:hover,
+        &:focus {
           svg {
             color: var(--color-red-dark);
           }
         }
       }
-      svg {
-        font-size: 1.8rem;
-        color: whitesmoke;
-        transition: color 250ms ease-in-out;
-      }
     }
   }
+
   li {
     @media screen and (max-width: 768px) {
       display: none;
     }
+
     a {
+      color: var(--color-font);
       cursor: pointer;
       transition: color ease-in-out 250ms;
-      color: var(--color-font);
-      &:hover, &:focus {
+
+      &:hover,
+      &:focus {
         color: var(--color-red-dark);
       }
     }
@@ -87,56 +162,4 @@
 
 .notActive {
   transform: translateX(-100%) !important;
-}
-
-.mobileNav {
-  display: none;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0,0,0,0.3);
-  transition: transform ease-in-out 250ms;
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    a {
-      font-size: 1.4rem;
-      color: whitesmoke;
-    }
-    .close {
-      outline: 2px solid whitesmoke;
-      width: min-content;
-      margin-bottom: 2rem;
-      margin-top: 2rem;
-      &:hover, &:focus {
-        outline-color: var(--color-red-dark);
-        svg {
-          color: var(--color-red-dark);
-        }
-      }
-      button {
-        display: flex;
-        background: transparent;
-        padding: 0.7rem;
-      }
-      svg {
-        font-size: 1.8rem;
-        color: whitesmoke;
-        transition: color 250ms ease-in-out;
-      }
-    }
-  }
-  @media screen and (max-width: 768px) {
-    display: flex;
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    left: 0;
-    min-height: 100vh;
-    nav {
-      width: 250px;
-      background: var(--color-bg);
-      padding: 1rem;
-    }
-  }
 }
