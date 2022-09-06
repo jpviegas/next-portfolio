@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Features from "../components/Features";
 import Intro from "../components/Intro";
 import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
@@ -27,6 +28,7 @@ export default function Home() {
       <main className="global">
         <Intro />
         <Portfolio />
+        <Features />
       </main>
     </div>
   );

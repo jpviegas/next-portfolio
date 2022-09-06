@@ -16,6 +16,7 @@ function PortfolioModal({
   imageSource,
 }) {
   const modal = useRef();
+
   const escFunction = useCallback((event) => {
     if (event.key === "Escape") {
       setActive(false);
@@ -28,6 +29,7 @@ function PortfolioModal({
       document.removeEventListener("keydown", escFunction, false);
     };
   }, [modal]);
+
   useOnClickOutside(modal, () => setActive(false));
 
   return (

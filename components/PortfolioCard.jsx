@@ -16,6 +16,7 @@ function PortfolioCard({
 }) {
   const [active, setActive] = useState(false);
   const [parent] = useAutoAnimate();
+
   return (
     <div ref={parent}>
       <Fade fraction={0.2} duration={500}>
