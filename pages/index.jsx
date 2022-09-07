@@ -3,6 +3,7 @@ import Features from "../components/Features";
 import Intro from "../components/Intro";
 import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
+import Resume from "../components/Resume";
 import touchicon from "../public/apple-touch-icon.png";
 import favicon16 from "../public/favicon-16x16.png";
 import favicon32 from "../public/favicon-32x32.png";
@@ -29,6 +30,7 @@ export default function Home() {
         <Intro />
         <Portfolio />
         <Features />
+        <Resume />
       </main>
     </div>
   );

@@ -1,0 +1,162 @@
+.subtitle,
+.subtitle2 {
+  color: var(--color-red-dark);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  text-align: center;
+}
+
+.subtitle2 {
+  text-align: start;
+}
+
+.title {
+  color: var(--color-font);
+  font-size: 3.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.tabs {
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
+
+  button {
+    background: var(--color-bg-gradient);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    color: var(--color-font);
+    cursor: pointer;
+    font-size: 2.2rem;
+    font-weight: 500;
+    height: 120px;
+    width: 100%;
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.tabActive {
+  color: var(--color-red-dark) !important;
+}
+
+.title2 {
+  color: var(--color-font);
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.rows {
+  display: flex;
+  gap: 2rem;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .cards {
+    border-left: 5px solid #17191c;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-left: 1.4rem;
+    position: relative;
+
+    @media screen and (max-width: 1024px) {
+      padding-bottom: 2rem;
+    }
+  }
+
+  .card {
+    background: var(--color-bg-gradient);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 45px 40px;
+    position: relative;
+    transition: all 250ms linear;
+
+    &::before {
+      background: var(--color-bg);
+      border: 5.5px solid #17191c;
+      border-radius: 50%;
+      content: "";
+      height: 0.7rem;
+      left: -2.2rem;
+      position: absolute;
+      top: 17%;
+      transition: background 200ms ease;
+      width: 0.7rem;
+      z-index: 2;
+    }
+
+    &:hover {
+      background: var(--color-bg-gradient-dark);
+
+      &::before {
+        background: var(--color-red-dark);
+      }
+    }
+
+    &::after {
+      background: #17191c;
+      content: "";
+      height: 5px;
+      left: -1.4rem;
+      position: absolute;
+      top: 20%;
+      width: 1.4rem;
+    }
+
+    .info {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: space-between;
+      margin-bottom: 2.5rem;
+
+      .cardTitle {
+        h4 {
+          color: var(--color-font);
+          font-size: 1.4rem;
+        }
+
+        span {
+          color: #7c838e;
+          font-size: 0.9rem;
+          text-align: start;
+        }
+      }
+
+      .gradeContainer {
+        background: var(--color-bg-gradient);
+        border-radius: 8px;
+        box-shadow: var(--box-shadow-1);
+        padding: 0.5rem;
+
+        span {
+          color: var(--color-red-dark);
+          font-weight: 500;
+        }
+      }
+    }
+
+    .description {
+      color: #878e99;
+      font-size: 1.1rem;
+    }
+  }
+}
