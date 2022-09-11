@@ -2,6 +2,8 @@
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
+import { GrDocumentPdf } from "react-icons/gr";
+// import resume from "../assets/curriculo-JoaoPaulo-dev.pdf";
 import styles from "../styles/Resume.module.scss";
 import Section from "./Section";
 
@@ -10,7 +12,7 @@ function Card({ title, institution, grade, description }) {
     <div className={styles.card}>
       <div className={styles.info}>
         <div className={styles.cardTitle}>
-          <h4>{title}</h4>
+          <h2>{title}</h2>
           <span>{institution}</span>
         </div>
         <div className={styles.grade}>
@@ -30,9 +32,18 @@ function Resume() {
   const [parent] = useAutoAnimate();
 
   return (
-    <Section id="resume">
-      <span className={styles.subtitle}>experiencia</span>
-      <h1 className={styles.title}>Currículo</h1>
+    <Section id="curriculo">
+      <span className={styles.subtitle}>Experiência</span>
+      <a
+        href="assets/curriculo-JoaoPaulo-dev.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        download
+      >
+        <h1 className={styles.title}>
+          Currículo <GrDocumentPdf />
+        </h1>
+      </a>
       <div className={styles.tabs}>
         <button
           type="button"
@@ -42,7 +53,7 @@ function Resume() {
             setExp(false);
           }}
         >
-          <span>Educação</span>
+          <span>Formação</span>
         </button>
         <button
           type="button"
@@ -59,21 +70,30 @@ function Resume() {
         <Fade duration={1000} triggerOnce>
           {ed && (
             <div className={styles.education}>
-              <span className={styles.subtitle}>2010</span>
-              <h2 className={styles.title2}>Educação</h2>
+              {/* <span className={styles.subtitle}>2010</span> */}
+              <h2 className={styles.title2}>Formação acadêmica</h2>
               <div className={styles.rows}>
                 <div className={styles.cards}>
                   <Card
-                    description="ufrn"
+                    description="Curso focado em hard skill e soft skill, com matérias que vão de comandos básicos do linux até higher order functions do ecma script 6 e estruturas de dados com python."
+                    grade="Curso desenvolvedor full stack"
+                    institution="Trybe"
+                    title="Trybe"
+                  />
+                  <Card
+                    description="Estatística, probabilidade, cálculo, algoritmo, banco de dados."
                     grade="Bacharel em Estatística"
-                    institution="UFRN"
+                    institution="Universidade Federal do Rio Grande do Norte"
                     title="UFRN"
                   />
                   <Card
-                    description="card ed 2"
-                    grade="card ed 2"
-                    institution="card ed 2"
-                    title="card ed 2"
+                    // description="Programa educacional prático e intensivo,
+                    // ministrado à distância, que tem por objetivo o desenvolvimento de habilidades que
+                    // permitam ao aluno desempenhar atividade profissional na área."
+                    description="Curso imersivo, prático e interativo. Habilidades: mobile design, avaliação de interfaces e venda de produtos/serviços."
+                    grade="Bootcamp UX Designer"
+                    institution="Instituto de Gestão e Tecnologia"
+                    title="IGTI"
                   />
                 </div>
               </div>
@@ -82,21 +102,21 @@ function Resume() {
           <div className={styles.experiencie}>
             {exp && (
               <div className={styles.education}>
-                <span className={styles.subtitle}>2017</span>
-                <h2 className={styles.title2}>Experiência</h2>
+                {/* <span className={styles.subtitle}>2017</span> */}
+                <h2 className={styles.title2}>Experiência profissional</h2>
                 <div className={styles.rows}>
                   <div className={styles.cards}>
                     <Card
-                      description="#TODO:"
-                      grade="Rifóles"
-                      institution="Rifóles"
-                      title="Rifóles"
+                      description="Elaboração de gráficos e relatórios das avaliações internas da UFRN. De agosto de 2018 até agosto de 2022."
+                      grade="Bolsista de pesquisa"
+                      institution="Universidade Federal do Rio Grande do Norte"
+                      title="UFRN"
                     />
                     <Card
-                      description="card ex 2"
-                      grade="card ex 2"
-                      institution="card ex 2"
-                      title="card ex 2"
+                      description="Elaboração de planilhas, negociação com fornecedores de produtos para o setor de compras e para governança. De setembro de 2014 até janeiro de 2016."
+                      grade="Assistente administrativo jovem aprendiz"
+                      institution="Rifóles Praia Hotel e Resort"
+                      title="Rifóles"
                     />
                   </div>
                 </div>

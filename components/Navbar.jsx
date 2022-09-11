@@ -37,10 +37,11 @@ function Navbar() {
               {/* <span>jpv</span> */}
               <div className={styles.profile}>
                 <Image
-                  width="100%"
-                  height="100%"
+                  width={100}
+                  height={100}
                   objectFit="contain"
                   src={me}
+                  alt="a picture of me"
                 />
               </div>
             </>
@@ -48,22 +49,25 @@ function Navbar() {
         </div>
         <ul className={styles.navList}>
           <li>
-            <Link href="#home">Home</Link>
+            <Link href="#inicio">Início</Link>
           </li>
           <li>
             <Link href="#portfolio">Portfólio</Link>
           </li>
           <li>
-            <Link href="#resume">Resume</Link>
+            <Link href="#curriculo">Currículo</Link>
           </li>
           <li>
-            <Link href="#pricing">Pricing</Link>
-          </li>
-          <li>
-            <Link href="#contact">Contact</Link>
+            <Link href="#contato">Contato</Link>
           </li>
           <div className={styles.mobile}>
-            <button type="button" onClick={() => setIsActive(true)}>
+            <button
+              type="button"
+              onClick={() => setIsActive(true)}
+              // name="open/close side nav menu"
+              // title="open/close side nav menu"
+              aria-label="open/close side nav menu"
+            >
               <FaBars />
             </button>
           </div>
@@ -83,19 +87,16 @@ function Navbar() {
                 </button>
               </div>
               <li>
-                <Link href="#home">Home</Link>
+                <Link href="#inicio">Início</Link>
               </li>
               <li>
                 <Link href="#portfolio">Portfólio</Link>
               </li>
               <li>
-                <Link href="#resume">Resume</Link>
+                <Link href="#curriculo">Currículo</Link>
               </li>
               <li>
-                <Link href="#pricing">Pricing</Link>
-              </li>
-              <li>
-                <Link href="#contact">Contact</Link>
+                <Link href="#contato">Contato</Link>
               </li>
             </ul>
           )}

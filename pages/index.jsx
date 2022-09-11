@@ -1,28 +1,28 @@
 import Head from "next/head";
+import Contact from "../components/Contact";
 import Features from "../components/Features";
+import Footer from "../components/Footer";
 import Intro from "../components/Intro";
 import Navbar from "../components/Navbar";
 import Portfolio from "../components/Portfolio";
 import Resume from "../components/Resume";
-import touchicon from "../public/apple-touch-icon.png";
-import favicon16 from "../public/favicon-16x16.png";
-import favicon32 from "../public/favicon-32x32.png";
-import favicon from "../public/favicon.ico";
 import styles from "../styles/Home.module.scss";
 
 export default function Home() {
   return (
-    <div id="home" className={styles.container}>
+    <div id="inicio" className={styles.container}>
       <Head>
         <title>jpviegas | Portfólio</title>
+        lang
+        <meta
+          name="robots"
+          content="portfolio,html,css,javascript,react,next"
+        />
+        <meta name="description" content="portfolio joão paulo viegas" />
         <meta
           name="jpviegas portfolio"
           content="jpviegas portfolio created with nextjs"
         />
-        <link rel="icon" href={favicon} />
-        <link rel="apple-touch-icon" sizes="180x180" href={touchicon} />
-        <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />
-        <link rel="icon" type="image/png" sizes="16x16" href={favicon16} />
         <link rel="manifest" href="/site.webmanifest" />
       </Head>
       <Navbar />
@@ -31,6 +31,8 @@ export default function Home() {
         <Portfolio />
         <Features />
         <Resume />
+        <Contact />
+        <Footer />
       </main>
     </div>
   );

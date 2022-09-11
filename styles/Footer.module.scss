@@ -1,0 +1,25 @@
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  padding: 7rem 0;
+
+  .imgContainer {
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow-1);
+    display: flex;
+    height: 80px;
+    justify-content: center;
+    overflow: hidden;
+    width: 80px;
+  }
+
+  p {
+    color: var(--color-font);
+    font-size: 1.3rem;
+    text-align: center;
+  }
+}

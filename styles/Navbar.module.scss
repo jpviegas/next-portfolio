@@ -73,7 +73,7 @@
       width: min-content;
 
       svg {
-        color: whitesmoke;
+        color: var(--color-font);
         font-size: 1.8rem;
         transition: color 250ms ease-in-out;
       }
@@ -91,6 +91,7 @@
         background: transparent;
         display: flex;
         padding: 0.7rem;
+        color: aqua;
       }
     }
   }
