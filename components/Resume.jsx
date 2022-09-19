@@ -3,7 +3,6 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import { GrDocumentPdf } from "react-icons/gr";
-// import resume from "../assets/curriculo-JoaoPaulo-dev.pdf";
 import styles from "../styles/Resume.module.scss";
 import Section from "./Section";
 
@@ -35,7 +34,7 @@ function Resume() {
     <Section id="curriculo">
       <span className={styles.subtitle}>Experiência</span>
       <a
-        href="assets/curriculo-JoaoPaulo-dev.pdf"
+        href="/curriculo-JoaoPaulo-dev.pdf"
         target="_blank"
         rel="noopener noreferrer"
         download
@@ -70,7 +69,6 @@ function Resume() {
         <Fade duration={1000} triggerOnce>
           {ed && (
             <div className={styles.education}>
-              {/* <span className={styles.subtitle}>2010</span> */}
               <h2 className={styles.title2}>Formação acadêmica</h2>
               <div className={styles.rows}>
                 <div className={styles.cards}>
@@ -87,9 +85,6 @@ function Resume() {
                     title="UFRN"
                   />
                   <Card
-                    // description="Programa educacional prático e intensivo,
-                    // ministrado à distância, que tem por objetivo o desenvolvimento de habilidades que
-                    // permitam ao aluno desempenhar atividade profissional na área."
                     description="Curso imersivo, prático e interativo. Habilidades: mobile design, avaliação de interfaces e venda de produtos/serviços."
                     grade="Bootcamp UX Designer"
                     institution="Instituto de Gestão e Tecnologia"
@@ -102,7 +97,6 @@ function Resume() {
           <div className={styles.experiencie}>
             {exp && (
               <div className={styles.education}>
-                {/* <span className={styles.subtitle}>2017</span> */}
                 <h2 className={styles.title2}>Experiência profissional</h2>
                 <div className={styles.rows}>
                   <div className={styles.cards}>

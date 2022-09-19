@@ -7,7 +7,6 @@ import useOnClickOutside from "../hooks/useClickOutside";
 import styles from "../styles/PortfolioModal.module.scss";
 
 function PortfolioModal({
-  active,
   setActive,
   feature,
   title,
