@@ -61,10 +61,6 @@ function PortfolioModal({
               <span className={styles.title}>{title}</span>
               <p className={styles.description}>{description}</p>
               <div className={styles.actions}>
-                <button type="button">
-                  <span>Gostei</span>
-                  <FaThumbsUp />
-                </button>
                 <a href={projectLink} target="_blank" rel="noopener noreferrer">
                   <button type="button">
                     <span>Ver Projeto</span>

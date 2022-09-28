@@ -14,7 +14,7 @@ import Section from "./Section";
 
 function Features() {
   return (
-    <Section>
+    <Section id="habilidades">
       <span className={styles.subtitle} />
       <h1 className={styles.title}>Trabalho com:</h1>
       <div className={styles.cards}>

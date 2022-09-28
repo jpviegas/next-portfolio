@@ -33,18 +33,15 @@ function Navbar() {
       <nav className={styles.inner}>
         <div className={styles.me}>
           <Link href="/">
-            <>
-              {/* <span>jpv</span> */}
-              <div className={styles.profile}>
-                <Image
-                  width={100}
-                  height={100}
-                  objectFit="contain"
-                  src={me}
-                  alt="a picture of me"
-                />
-              </div>
-            </>
+            <div className={styles.profile}>
+              <Image
+                width={100}
+                height={100}
+                objectFit="contain"
+                src={me}
+                alt="a picture of me"
+              />
+            </div>
           </Link>
         </div>
         <ul className={styles.navList}>
@@ -53,6 +50,9 @@ function Navbar() {
           </li>
           <li>
             <Link href="#portfolio">Portfólio</Link>
+          </li>
+          <li>
+            <Link href="#habilidades">Habilidades</Link>
           </li>
           <li>
             <Link href="#curriculo">Currículo</Link>
@@ -64,8 +64,6 @@ function Navbar() {
             <button
               type="button"
               onClick={() => setIsActive(true)}
-              // name="open/close side nav menu"
-              // title="open/close side nav menu"
               aria-label="open/close side nav menu"
             >
               <FaBars />
@@ -91,6 +89,9 @@ function Navbar() {
               </li>
               <li>
                 <Link href="#portfolio">Portfólio</Link>
+              </li>
+              <li>
+                <Link href="#habilidades">Habilidades</Link>
               </li>
               <li>
                 <Link href="#curriculo">Currículo</Link>
